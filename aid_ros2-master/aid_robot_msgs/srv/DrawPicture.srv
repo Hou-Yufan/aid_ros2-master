@@ -1,0 +1,7 @@
+string frame_id
+string type
+uint32 map_id
+StartToEndPoint[] data
+---
+bool success
+string message

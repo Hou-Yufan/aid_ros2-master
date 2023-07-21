@@ -1,0 +1,7 @@
+<launch>
+<include file="$(find-pkg-share robot_bringup)/launch/robot.launch.py"/>
+<include file="$(find-pkg-share astra_camera)/launch/dabai_dcw.launch.py"/>
+<include file="$(find-pkg-share rosbridge_server)/launch/rosbridge_websocket_launch.xml"/>
+<!-- <include file="$(find-pkg-share aid_navigation2)/launch/navigation2.launch.py"/> -->
+  <!-- <node name="aid_robot_py" pkg="aid_robot_py" exec="launch_manager_node"></node> -->
+</launch>

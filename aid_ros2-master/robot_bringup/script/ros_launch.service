@@ -1,0 +1,19 @@
+[Unit]
+Description=Aid ROS nodes
+After=network.target
+StartLimitIntervalSec=0
+ConditionPathExists=/root/aid_ros_ws/install/setup.bash
+
+[Service]
+Type=simple
+User=root
+EnvironmentFile=
+ExecStart=bash /root/aid_ros_ws/install/robot_bringup/share/robot_bringup/script/ros2_robot_start.bash
+ExecStop=/bin/kill ${MAINPID}
+Restart=on-failure
+StartLimitInterval=60
+StartLimitBurst=3
+KillMode=mixed
+
+[Install]
+WantedBy=multi-user.target

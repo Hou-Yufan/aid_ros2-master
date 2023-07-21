@@ -1,0 +1,5 @@
+<library path="nav2_pointcloud_costmap_plugin_core">
+  <class name="nav2_pointcloud_costmap_plugin/PointcloudLayer" type="nav2_pointcloud_costmap_plugin::PointcloudLayer" base_class_type="nav2_costmap_2d::Layer">
+    <description>This is an example plugin which puts repeating costs pointclouds to costmap</description>
+  </class>
+</library>

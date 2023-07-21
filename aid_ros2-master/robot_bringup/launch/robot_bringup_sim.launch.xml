@@ -1,0 +1,9 @@
+<launch>
+
+<include file="$(find-pkg-share robot_bringup)/launch/robot_sim.launch.py">
+<arg name="use_sim_time" value="true"/> </include>
+<include file="$(find-pkg-share rosbridge_server)/launch/rosbridge_websocket_launch.xml">
+<arg name="use_sim_time" value="true"/> </include>
+<!-- <include file="$(find-pkg-share aid_navigation2)/launch/navigation2.launch.py"/> -->
+  <!-- <node name="aid_robot_py" pkg="aid_robot_py" exec="launch_manager_node"></node> -->
+</launch>

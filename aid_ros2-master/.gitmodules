@@ -1,0 +1,3 @@
+[submodule "rosbridge_suite"]
+	path = rosbridge_suite
+	url = git@github.com:Jade-rabbit-robot/rosbridge_suite.git

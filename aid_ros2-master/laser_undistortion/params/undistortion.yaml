@@ -1,0 +1,6 @@
+laser_undistortion_node:
+  ros__parameters:
+    scan_frame_name: "base_scan"
+    odom_name: "odom"
+    scan_sub_name: "scan"
+    scan_pub_name: "scan_undistortion"

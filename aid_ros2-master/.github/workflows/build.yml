@@ -1,0 +1,21 @@
+
+name: Build and Test
+on:
+  pull_request:
+    branches: [ master ]
+  push:
+    branches: [ master ]
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking out
+        uses: actions/checkout@v2.3.4
+      - name: Building and testing
+        uses: ichiro-its/ros2-ci@v1.0.0
+        with:
+          ros2-distro: foxy
+          apt-packages: ros-foxy-turtlebot3 libgoogle-glog-dev
+          pre-install: rm -rf ros2_astra_camera && rm -rf bluesea-ros2 && DEBIAN_FRONTEND=noninteractive apt-get install keyboard-configuration -y && rosdep install --from-paths ./ --ignore-src  -y
+          pre-build: colcon build --packages-select jade_rabbit_py && source install/setup.bash
+
